@@ -26,7 +26,7 @@ TODO
 ----
 
  * Verify that the compilation works by calling some methods
- * Recreate a wav to vorbis encoding based on test/VorbisEncoder.java
+ * Recreate a wav to vorbis encoding based on test/encoder_example.c
  * Create utility methods to make it easier to work with the library
  * Add missing methods to post.js if it makes sense
  * Make it go faster
