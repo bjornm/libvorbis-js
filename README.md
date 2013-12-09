@@ -12,8 +12,8 @@ It makes it possible to encode audio data into ogg/vorbis format.
 Current status (2013-12-09)
 ---------------------------
 
-Compiles but no happy case written yet. Probably does not work yet but you can always
-try to call the methods and see.
+Compiles and able to write header properly. Still needs glue code to make it easier to work with
+e.g. AudioBuffers or at least Float32Arrays.
 
 See post.js for a brief listing of the ported methods.
 
@@ -30,7 +30,7 @@ TODO
  * Create utility methods to make it easier to work with the library
  * Add missing methods to post.js if it makes sense
  * Make it go faster
- * Make it use TypedArrays, Blobs or other suitable HTML5 data types
+ * Make it use AudioBuffers, Float32Arrays, Blobs or other suitable HTML5 data types
 
 Contributions are very welcome!
 
