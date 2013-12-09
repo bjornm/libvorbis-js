@@ -14,12 +14,12 @@ dist/libvorbis.min.js: dist/libvorbis.js closcomp
 	java -jar closcomp/compiler.jar $< --language_in ECMASCRIPT5 --js_output_file $@
 
 closcomp: closcomp.tar.gz
-    mkdir $@ && \
-    cd $@ && \
+	mkdir $@ && \
+	cd $@ && \
 	tar xzvf ../$@.tar.gz
 	
 closcomp.tar.gz:
-	test -e "$@" || wget -O closcomp.tar.gz https://closure-compiler.googlecode.com/files/compiler-20131014.tar.gz
+	test -e "$@" || wget -O closcomp.tar.gz http://closure-compiler.googlecode.com/files/compiler-20131014.tar.gz
 
 $(VORBIS): $(VORBIS).tar.gz
 	tar xzvf $@.tar.gz && \
