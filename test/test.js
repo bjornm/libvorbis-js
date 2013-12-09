@@ -1,5 +1,5 @@
 var fs = require('fs');
-eval(fs.readFileSync('dist/libvorbis.js')+'');
+eval(fs.readFileSync('../dist/libvorbis.js')+'');
 
 console.log(Vorbis.vorbis_version_string());
 var vorbis_info = CModule._malloc(4096);

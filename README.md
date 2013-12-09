@@ -20,7 +20,20 @@ See post.js for a brief listing of the ported methods.
 See test.js for a simple test which you can run using node js, e.g.
 
     make
-    node test.js
+    node test/test.js
+
+TODO
+----
+
+ * Verify that the compilation works by calling some methods
+ * Recreate a wav to vorbis encoding based on test/VorbisEncoder.java
+ * Create utility methods to make it easier to work with the library
+ * Add missing methods to post.js if it makes sense
+ * Make it go faster
+ * Make it use TypedArrays, Blobs or other suitable HTML5 data types
+
+Contributions are very welcome!
+
 
 More info
 ---------
