@@ -12,8 +12,9 @@ It makes it possible to encode audio data into ogg/vorbis format.
 Current status (2013-12-09)
 ---------------------------
 
-Compiles and able to write header properly. Still needs glue code to make it easier to work with
-e.g. AudioBuffers or at least Float32Arrays.
+Early alpha. The code compiles and is able to write ogg headers properly. Not fully functional except if low-level api use is okay.
+Still needs glue code to make it easier to work with
+e.g. AudioBuffers or at least Float32Arrays. 
 
 See post.js for a brief listing of the ported methods.
 
@@ -25,12 +26,10 @@ See test.js for a simple test which you can run using node js, e.g.
 TODO
 ----
 
- * Verify that the compilation works by calling some methods
- * Recreate a wav to vorbis encoding based on test/encoder_example.c
- * Create utility methods to make it easier to work with the library
+ * Recreate a wav to vorbis encoding based on test/encoder_example.c - in particular, make the audio writing loop work
+ * Create utility methods to make it easier to work with the library - encode(AudioBuffer src, float quality) : Blob
  * Add missing methods to post.js if it makes sense
  * Make it go faster
- * Make it use AudioBuffers, Float32Arrays, Blobs or other suitable HTML5 data types
 
 Contributions are very welcome!
 
