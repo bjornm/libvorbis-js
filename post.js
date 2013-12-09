@@ -7,6 +7,8 @@ return {
 	ogg_stream_destroy: Module.cwrap('ogg_stream_destroy', 'number', ['number']),
 	ogg_stream_packetin: Module.cwrap('ogg_stream_packetin', 'number', ['number', 'number']),
 	ogg_stream_pageout: Module.cwrap('ogg_stream_pageout', 'number', ['number', 'number']),
+	ogg_stream_flush: Module.cwrap('ogg_stream_flush', 'number', ['number', 'number']),
+	ogg_page_eos: Module.cwrap('ogg_page_eos', 'number', ['number']),
 	
 	vorbis_version_string: Module.cwrap('vorbis_version_string', 'string'),
 	
@@ -20,6 +22,12 @@ return {
 	vorbis_analysis: Module.cwrap('vorbis_analysis', 'number', ['number', 'number']),
 	vorbis_bitrate_addblock: Module.cwrap('vorbis_bitrate_addblock', 'number', ['number']),
 	vorbis_bitrate_flushpacket: Module.cwrap('vorbis_bitrate_flushpacket', 'number', ['number', 'number']),
+	
+	vorbis_comment_init: Module.cwrap('vorbis_comment_init', 'number', ['number']),
+	vorbis_comment_clear: Module.cwrap('vorbis_comment_clear', 'number', ['number']),
+	vorbis_comment_add_tag: Module.cwrap('vorbis_comment_add_tag', 'number', ['number', 'string', 'string']),
+	vorbis_comment_query: Module.cwrap('vorbis_comment_query', 'string', ['number', 'string', 'number']),
+	vorbis_comment_query_count: Module.cwrap('vorbis_comment_query_count', 'number', ['number', 'string']),
 	
 	vorbis_encode_init_vbr: Module.cwrap('vorbis_encode_init_vbr', 'number', ['number', 'number', 'number']),
 	
